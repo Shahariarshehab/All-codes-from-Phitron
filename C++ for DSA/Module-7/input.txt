@@ -1,0 +1,7 @@
+6
+sharif 1 100
+rabby 2 99
+shaharia 3 98
+akbour 4 92
+supto 5 95
+razin 7 91

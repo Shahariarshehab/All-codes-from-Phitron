@@ -1,0 +1,4 @@
+300Tk has been deposited to this account.
+600Tk has been withdrawn from this account.
+12345 has 200Tk
+Insufficient Balance

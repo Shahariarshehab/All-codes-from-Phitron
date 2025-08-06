@@ -1,0 +1,1 @@
+{"name":"Local: same","url":"f:\\Phitron\\Basic Data Structures\\Assignment-2\\same.cpp","tests":[{"id":1751645369420,"input":"1 2 3 4 -1\n1 2 3 4 -1","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Phitron\\Basic Data Structures\\Assignment-2\\same.cpp","group":"local","local":true}

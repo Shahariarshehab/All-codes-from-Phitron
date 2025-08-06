@@ -1,0 +1,4 @@
+sumation=15
+subtraction=5
+multiplication=50
+divition=2.000000

@@ -1,0 +1,1 @@
+{"name":"Local: search1","url":"f:\\Phitron\\Basic Data Structures\\Assignment-2\\search1.cpp","tests":[{"id":1751645716080,"input":"1\n1 2 3 4 5 -1\n3","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Phitron\\Basic Data Structures\\Assignment-2\\search1.cpp","group":"local","local":true}
