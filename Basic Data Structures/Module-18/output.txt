@@ -1,0 +1,5 @@
+Your bank a.c ***425 credited with BDT 5000.00
+Your bank a.c ***425 debited with BDT 3000.00
+You have Insufficient Balance.
+Your bank a.c ***425 debited with BDT 3000.00
+***425 has BDT 0.00
