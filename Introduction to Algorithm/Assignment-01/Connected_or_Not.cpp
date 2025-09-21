@@ -4,7 +4,7 @@ void shaharia_ar_code()
 {
     int n, e;
     cin >> n >> e;
-    vector<unordered_set<int>> adj_list(n);
+    vector<set<int>> adj_list(n);
     while (e--)
     {
         int a, b;

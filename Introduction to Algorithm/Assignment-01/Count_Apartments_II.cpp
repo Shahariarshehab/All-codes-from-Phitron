@@ -38,7 +38,8 @@ long long dfs(int x, int y)
     }
     return cnt;
 }
-void shaharia_ar_code()
+
+int main()
 {
 
     cin >> n >> e;
@@ -68,7 +69,7 @@ void shaharia_ar_code()
     }
     else
     {
-        for (size_t i = 0; i < ap_sz.size(); i++)
+        for (int i = 0; i < ap_sz.size(); i++)
         {
             cout << ap_sz[i];
             if (i != ap_sz.size() - 1)
@@ -78,9 +79,5 @@ void shaharia_ar_code()
         }
         cout << "\n";
     }
-}
-int main()
-{
-    shaharia_ar_code();
     return 0;
 }
