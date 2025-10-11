@@ -20,18 +20,14 @@ void Shaharia_ar_solve()
 {
     int t;
     cin >> t;
-    while (t--)
+    double sum = 0.0;
+    for (int i = 0; i < t; i++)
     {
-        ll n;
-        cin >> n;
-        for (ll i = 0; i < n; i++)
-        {
-            ll x;
-            cin >> x;
-            cout << n + 1 - x << " ";
-        }
-        cout << nl;
+        double a, b;
+        cin >> a >> b;
+        sum += (a * b);
     }
+    cout << fixed << setprecision(3) << sum << nl;
 }
 int main()
 {

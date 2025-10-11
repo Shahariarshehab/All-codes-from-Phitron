@@ -22,15 +22,36 @@ void Shaharia_ar_solve()
     cin >> t;
     while (t--)
     {
-        ll n;
+        int n;
         cin >> n;
-        for (ll i = 0; i < n; i++)
+        int f = -1, l = -1;
+        string s;
+        cin >> s;
+        for (int i = 0; i < n; i++)
         {
-            ll x;
-            cin >> x;
-            cout << n + 1 - x << " ";
+            if (s[i] == '1')
+            {
+                if (f == -1)
+                {
+                    f = i;
+                }
+                l = i;
+            }
         }
-        cout << nl;
+        if (f == -1 || f == l)
+        {
+            cout << 0 << nl;
+            continue;
+        }
+        int cnt = 0;
+        for (int i = f; i < l; i++)
+        {
+            if (s[i] == '0')
+            {
+                cnt++;
+            }
+        }
+        cout << cnt << nl;
     }
 }
 int main()

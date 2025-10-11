@@ -22,15 +22,22 @@ void Shaharia_ar_solve()
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
-        for (ll i = 0; i < n; i++)
+        int n, a, b;
+        cin >> n >> a >> b;
+        int min_d = INT_MAX;
+        for (int i = 0; i < n; i++)
         {
-            ll x;
-            cin >> x;
-            cout << n + 1 - x << " ";
+            int x, y;
+            cin >> x >> y;
+
+            int d = abs(x - a) + abs(y - b);
+
+            if (d < min_d)
+            {
+                min_d = d;
+            }
         }
-        cout << nl;
+        cout << min_d << nl;
     }
 }
 int main()

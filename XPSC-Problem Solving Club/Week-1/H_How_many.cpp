@@ -18,20 +18,24 @@ using namespace std;
 
 void Shaharia_ar_solve()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int s, t;
+    cin >> s >> t;
+    int cnt = 0;
+
+    for (int i = 0; i <= s; i++)
     {
-        ll n;
-        cin >> n;
-        for (ll i = 0; i < n; i++)
+        for (int j = 0; j <= s; j++)
         {
-            ll x;
-            cin >> x;
-            cout << n + 1 - x << " ";
+            for (int k = 0; k <= s; k++)
+            {
+                if (i + j + k <= s && i * j * k <= t)
+                {
+                    cnt++;
+                }
+            }
         }
-        cout << nl;
     }
+    cout << cnt << nl;
 }
 int main()
 {

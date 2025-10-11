@@ -18,20 +18,9 @@ using namespace std;
 
 void Shaharia_ar_solve()
 {
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        ll n;
-        cin >> n;
-        for (ll i = 0; i < n; i++)
-        {
-            ll x;
-            cin >> x;
-            cout << n + 1 - x << " ";
-        }
-        cout << nl;
-    }
+    int a;
+    cin >> a;
+    cout << 7 - a << nl;
 }
 int main()
 {
