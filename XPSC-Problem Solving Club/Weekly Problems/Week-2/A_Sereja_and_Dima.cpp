@@ -20,12 +20,49 @@ void Shaharia_ar_solve()
 {
     int n;
     cin >> n;
-    int a[n];
+    vi a(n);
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
     }
-    
+
+    int l = 0, r = n - 1;
+    int s = 0, d = 0;
+    bool ok = false;
+    while (l <= r)
+    {
+        if (a[l] >= a[r])
+        {
+            if (!ok)
+            {
+                s += a[l];
+                l++;
+               
+            }
+            else
+            {
+                d += a[l];
+                l++;
+              
+            }
+        }
+        else
+        {
+
+            if (!ok)
+            {
+                s += a[r];
+                r--;
+            }
+            else
+            {
+                d += a[r];
+                r--;
+            }
+        }
+        ok=!ok;
+    }
+    cout << s << " " << d << nl;
 }
 int main()
 {

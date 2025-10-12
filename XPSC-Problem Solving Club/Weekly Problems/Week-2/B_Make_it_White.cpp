@@ -19,14 +19,32 @@ using namespace std;
 void Shaharia_ar_solve()
 {
     int t;
-    cin>>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
         int n;
-        cin>>n;
-        char c[n];
-        int f=
-    }   
+        cin >> n;
+        string s;
+        cin >> s;
+        int f = -1, l = -1;
+        for (int i = 0; i < n; i++)
+        {
+            if (s[i] == 'B')
+            {
+                if (f == -1)
+                {
+                    f = i;
+                }
+                l = i;
+            }
+        }
+        if (f == -1 || l == -1)
+        {
+            cout << 0 << nl;
+            continue;
+        }
+        cout << abs(f - l) + 1 << nl;
+    }
 }
 int main()
 {
