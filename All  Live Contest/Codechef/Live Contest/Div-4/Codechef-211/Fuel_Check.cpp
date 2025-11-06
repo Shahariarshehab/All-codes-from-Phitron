@@ -18,31 +18,16 @@ using namespace std;
 
 void Shaharia_ar_solve()
 {
-    ll n, q;
-    cin >> n >> q;
-    vll a(n);
-    for (int i = 0; i < n; i++)
+    int x, y;
+    cin >> x >> y;
+    if (x * y >= 100)
     {
-        cin >> a[i];
+        cout << "Yes" << nl;
     }
-    ll res = 0;
-    map<ll, int> mp;
-    int l = 0;
-    for (int i = 0; i < n; i++)
+    else
     {
-        mp[a[i]]++;
-        while (mp.size() > q)
-        {
-            mp[a[l]]--;
-            if (mp[a[l]] == 0)
-            {
-                mp.erase(a[l]);
-            }
-            l++;
-        }
-        res += (i - l + 1);
+        cout << "No" << nl;
     }
-    cout << res << nl;
 }
 int main()
 {

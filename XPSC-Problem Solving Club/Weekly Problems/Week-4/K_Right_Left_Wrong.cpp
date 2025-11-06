@@ -18,31 +18,43 @@ using namespace std;
 
 void Shaharia_ar_solve()
 {
-    ll n, q;
-    cin >> n >> q;
-    vll a(n);
-    for (int i = 0; i < n; i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        cin >> a[i];
-    }
-    ll res = 0;
-    map<ll, int> mp;
-    int l = 0;
-    for (int i = 0; i < n; i++)
-    {
-        mp[a[i]]++;
-        while (mp.size() > q)
+        int n;
+        cin >> n;
+        vll a(n + 1);
+        for (int i = 1; i <= n; i++)
         {
-            mp[a[l]]--;
-            if (mp[a[l]] == 0)
-            {
-                mp.erase(a[l]);
-            }
-            l++;
+            ll x;
+            cin >> x;
+            a[i] = a[i - 1] + x;
         }
-        res += (i - l + 1);
+        string s;
+        cin >> s;
+
+        ll res = 0;
+        int l = 0, r = n - 1;
+        while (l < r)
+        {
+            while (l < n && s[l] == 'R')
+            {
+                l++;
+            }
+            while (r >= 0 && s[r] == 'L')
+            {
+                r--;
+            }
+            if (l < r)
+            {
+                res += a[r + 1] - a[l];
+                l++;
+                r--;
+            }
+        }
+        cout << res << nl;
     }
-    cout << res << nl;
 }
 int main()
 {
