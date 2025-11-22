@@ -29,33 +29,28 @@ void Shaharia_ar_solve()
     {
         int n;
         cin >> n;
-        vi a(n);
-        vi b(1005, -1);
+        vll a(n);
         for (int i = 0; i < n; i++)
         {
             cin >> a[i];
-            b[a[i]] = i + 1;
         }
-        int ans = -1;
-        for (int i = 1; i <= 1000; i++)
+        int p = min_element(a.begin(), a.end()) - a.begin();
+        ll g = 0;
+        for (int i = 0; i < n; i++)
         {
-            if (b[i] == -1)
+            if (i != p && a[i] % a[p] == 0)
             {
-                continue;
-            }
-            for (int j = 1; j <= 1000; j++)
-            {
-                if (b[j] == -1)
-                {
-                    continue;
-                }
-                if (__gcd(i, j) == 1)
-                {
-                    ans = max(ans, b[i] + b[j]);
-                }
+                g = __gcd(g, a[i]);
             }
         }
-        cout << ans << nl;
+        if (g == a[p])
+        {
+            cout << "Yes" << nl;
+        }
+        else
+        {
+            cout << "No" << nl;
+        }
     }
 }
 int main()

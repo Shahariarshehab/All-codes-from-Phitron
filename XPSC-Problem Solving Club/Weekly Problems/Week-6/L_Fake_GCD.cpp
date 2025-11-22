@@ -19,32 +19,46 @@ using namespace std;
 void Shaharia_ar_solve()
 {
     int t;
-    cin>>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
         int n;
-        cin>>n;
-        if(n==1)
+        cin >> n;
+        vi odd_p, odd_v, even_p, even_v;
+        vi ans(n + 1, 0);
+        for (int i = 1; i <= n; i++)
         {
-            cout<<-1<<nl;
-            continue;
-        }
-        vi a(n);
-        int mid=n/2;
-        for(int i=0;i<n;i++)
-        {
-           a[i]=(i+mid)%n+1;
-        }
-        for(int i=0;i<n;i++)
-        {
-            if(i)
+            if (i % 2 == 1)
             {
-                cout<<' ';
+                odd_p.push_back(i);
+                odd_v.push_back(i);
             }
-            cout<<a[i];
+            else
+            {
+                even_p.push_back(i);
+                even_v.push_back(i);
+            }
         }
-        cout<<nl;
-    }   
+        int m = odd_p.size();
+        for (int j = 0; j < m; j++)
+        {
+            int pos = odd_p[j];
+            int val = odd_v[(j + 1) % m];
+            ans[pos] = val;
+        }
+        int p = even_p.size();
+        for (int j = 0; j < p; j++)
+        {
+            int pos = even_p[j];
+            int val = even_v[(j + 1) % p];
+            ans[pos] = val;
+        }
+        for (int i = 1; i <= n; i++)
+        {
+            cout << ans[i] << " ";
+        }
+        cout << nl;
+    }
 }
 int main()
 {
