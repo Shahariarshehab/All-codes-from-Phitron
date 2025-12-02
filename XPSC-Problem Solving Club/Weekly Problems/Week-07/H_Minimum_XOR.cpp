@@ -29,7 +29,21 @@ void Shaharia_ar_solve()
     {
         int n;
         cin >> n;
-        cout << n << " " << n - 1 << endl;
+        vi a(n);
+        int b = 0;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+            b ^= a[i];
+        }
+        int c = b;
+        int d;
+        for (int i = 0; i < n; i++)
+        {
+            d = b ^ a[i];
+            c = min(d, c);
+        }
+        cout << c << nl;
     }
 }
 int main()

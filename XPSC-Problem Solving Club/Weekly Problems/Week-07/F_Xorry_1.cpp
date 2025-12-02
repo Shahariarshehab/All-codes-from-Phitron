@@ -20,7 +20,16 @@ using namespace std;
 #define NA cout << "NO" << nl
 template <typename T>
 using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-
+int solve(int n)
+{
+    int b = n, cnt = 0;
+    while (b > 1)
+    {
+        b /= 2;
+        cnt++;
+    }
+    return (1 << cnt);
+}
 void Shaharia_ar_solve()
 {
     int t;
@@ -29,7 +38,8 @@ void Shaharia_ar_solve()
     {
         int n;
         cin >> n;
-        cout << n << " " << n - 1 << endl;
+        int a = solve(n);
+        cout << n - a << " " << a << nl;
     }
 }
 int main()
