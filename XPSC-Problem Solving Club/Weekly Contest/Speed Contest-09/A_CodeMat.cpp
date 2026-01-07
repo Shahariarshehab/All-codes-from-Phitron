@@ -16,37 +16,21 @@ using namespace std;
 #define ff first
 #define ss second
 #define nl '\n'
-#define HA cout << "YES" << nl
-#define NA cout << "NO" << nl
-template <typename T>
-using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+#define HA cout << "Yes" << nl
+#define NA cout << "No" << nl
+template <typename T>using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 void Shaharia_ar_solve()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int a,b;
+    cin>>a>>b;
+    if(a>=b)
     {
-        int a, b;
-        cin >> a >> b;
-        int c, d, e, f = 0;
-        for (int i = 0; i < a; i++)
-        {
-            cin >> c >> d >> e;
-            if (e <= b)
-            {
-                f = max({f, (c * d)});
-                
-            }
-        }
-        if (f == 0)
-        {
-            cout << "no tablet" << nl;
-        }
-        else
-        {
-            cout << f << nl;
-        }
+        NA;
+    } 
+    else
+    {
+        HA;
     }
 }
 int main()

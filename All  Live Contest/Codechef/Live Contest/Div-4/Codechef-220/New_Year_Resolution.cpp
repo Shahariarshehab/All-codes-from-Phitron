@@ -23,31 +23,9 @@ using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node
 
 void Shaharia_ar_solve()
 {
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int a, b;
-        cin >> a >> b;
-        int c, d, e, f = 0;
-        for (int i = 0; i < a; i++)
-        {
-            cin >> c >> d >> e;
-            if (e <= b)
-            {
-                f = max({f, (c * d)});
-                
-            }
-        }
-        if (f == 0)
-        {
-            cout << "no tablet" << nl;
-        }
-        else
-        {
-            cout << f << nl;
-        }
-    }
+    int n;
+    cin >> n;
+    cout << 31 * n << nl;
 }
 int main()
 {

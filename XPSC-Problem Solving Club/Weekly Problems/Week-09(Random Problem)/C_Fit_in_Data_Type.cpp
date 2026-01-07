@@ -29,24 +29,7 @@ void Shaharia_ar_solve()
     {
         int a, b;
         cin >> a >> b;
-        int c, d, e, f = 0;
-        for (int i = 0; i < a; i++)
-        {
-            cin >> c >> d >> e;
-            if (e <= b)
-            {
-                f = max({f, (c * d)});
-                
-            }
-        }
-        if (f == 0)
-        {
-            cout << "no tablet" << nl;
-        }
-        else
-        {
-            cout << f << nl;
-        }
+        cout << b % (a + 1) << nl;
     }
 }
 int main()

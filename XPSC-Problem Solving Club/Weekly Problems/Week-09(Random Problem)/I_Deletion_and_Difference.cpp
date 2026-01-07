@@ -27,26 +27,37 @@ void Shaharia_ar_solve()
     cin >> t;
     while (t--)
     {
-        int a, b;
-        cin >> a >> b;
-        int c, d, e, f = 0;
-        for (int i = 0; i < a; i++)
+        int n;
+        cin >> n;
+        vi a(n);
+        for (int i = 0; i < n; i++)
         {
-            cin >> c >> d >> e;
-            if (e <= b)
+            cin >> a[i];
+        }
+        sort(all(a));
+        deque<int> dq;
+        for (int i = 0; i < n; i++)
+        {
+            dq.push_back(a[i]);
+        }
+        int cnt = 0;
+        while (dq.size() > 1)
+        {
+            int a = dq.back();
+            dq.pop_back();
+            int b = dq.back();
+            dq.pop_back();
+            if (a == b)
             {
-                f = max({f, (c * d)});
-                
+                dq.push_front(0);
+            }
+            else
+            {
+                dq.push_back(b);
+                cnt++;
             }
         }
-        if (f == 0)
-        {
-            cout << "no tablet" << nl;
-        }
-        else
-        {
-            cout << f << nl;
-        }
+        cout << cnt + dq.size() << nl;
     }
 }
 int main()
