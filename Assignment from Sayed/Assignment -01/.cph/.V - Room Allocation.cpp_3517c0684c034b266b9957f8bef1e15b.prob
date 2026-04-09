@@ -1,0 +1,1 @@
+{"name":"Local: V - Room Allocation","url":"f:\\Phitron\\Assignment from Sayed\\Assignment -01\\V - Room Allocation.cpp","tests":[{"id":1775746231477,"input":"3\n1 2\n2 4\n4 4","output":"2\n1 2 1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Phitron\\Assignment from Sayed\\Assignment -01\\V - Room Allocation.cpp","group":"local","local":true}
